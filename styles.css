@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --desaturatedRed: hsl(0, 36%, 70%);
+  --softRed: hsl(0, 93%, 68%);
+
+  --DarkGrayishRed: hsl(0, 6%, 24%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+}
+h1 {
+  text-transform: uppercase;
+}
+
+span {
+  color: var(--desaturatedRed);
+  font-weight: 300;
+}
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+  max-width: 100%;
+}
+
+.container .logo {
+  display: none;
+}
+
+picture img {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.logo {
+  padding: 1.5rem 0 0 1.5rem;
+}
+
+.text_side {
+  text-align: center;
+  padding: 1.5rem 2rem;
+}
+
+.text_side p {
+  color: var(--desaturatedRed);
+  line-height: 1.3;
+}
+.container h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--DarkGrayishRed);
+}
+form {
+  position: relative;
+}
+
+form input {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--desaturatedRed);
+  border-radius: 30px;
+  margin: 2rem 0 0;
+  color: var(--desaturatedRed);
+  width: 100%;
+}
+form input::placeholder {
+  color: var(--desaturatedRed);
+}
+
+form label {
+  position: absolute;
+  top: 40%;
+
+  right: 5.5rem;
+  display: none;
+}
+
+form button {
+  position: absolute;
+  top: 29%;
+  right: -0.5rem;
+
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: none;
+  border-radius: 30px;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+form button:hover {
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 80%, 86%));
+}
+
+.error {
+  color: var(--softRed) !important;
+  text-align: left;
+  margin-top: 0.5rem;
+  opacity: 0;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  body {
+    background: url(./images/bg-pattern-desktop.svg) no-repeat center/cover;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .text_side {
+    margin: 0 5.7rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100%;
+    padding: 3rem;
+  }
+  .text_side {
+    max-width: 500px;
+  }
+
+  .principal {
+    padding-left: 5.7rem;
+  }
+
+  picture img {
+    margin-top: -3.8rem;
+  }
+
+  .container h1 {
+    font-size: 4rem;
+    max-width: 500px;
+  }
+  .principal {
+    margin-left: 3rem;
+  }
+}
